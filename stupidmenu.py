@@ -1,11 +1,5 @@
 # vulnbytemenu
 
-# This application will scan websites for common vulnerabilities using nmap and the respective scripts!
-
-# Copyright 2018 by Allek Hall
-# For Fair Use under GNU
-# We Are Not Responsible for how you use this tool
-
 import subprocess
 import os
 import time
