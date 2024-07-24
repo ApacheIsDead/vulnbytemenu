@@ -1,2 +1,1 @@
-# applesmash scripts - vulnbyte
-This repository is just for various scripts and stuff that i happen to make.
+Repository for projects I have made over the years, starting at age 13.
