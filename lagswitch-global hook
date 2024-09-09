@@ -1,0 +1,25 @@
+import keyboad
+import os
+
+def exit():
+	cmd = "ipconfig /release"
+	os.system(cmd)
+
+def renew():
+	cmd2 = "ipconfig /renew"
+	os.system(cmd2)
+
+def lgSW():
+	hkey = input("Disconnect Key: ")
+	hkey2 = input("Connect Key: ")
+	keyboard.add_hotkey(hkey, exit)
+	keyboard.add_hotkey(hkey2, renew)
+	
+def main():
+	print("lg switch")
+
+	begin = input("Begin (y) or (n): ")
+	if begin == "y" or "yes":
+		lgSW()
+	else: 
+		continue
